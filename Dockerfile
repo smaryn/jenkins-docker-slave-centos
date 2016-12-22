@@ -50,7 +50,7 @@ RUN yum install -y epel-release \
      && groupadd -g 10000 jenkins \
      && useradd -c "Jenkins user" -d $HOME -u 10000 -g 10000 -m jenkins \
      && usermod -aG wheel jenkins \
-     && echo '%wheel      ALL=(ALL)  NOPASSWD: ALL' >> /etc/sudoers
+     && echo '%wheel      ALL=(ALL)  NOPASSWD: ALL' >> /etc/sudoers \
     #  && chmod 755 /usr/local/bin/jenkins-slave
     #  && /usr/bin/ssh-keygen -A
      && curl --create-dirs -sSLo /usr/share/jenkins/slave.jar https://repo.jenkins-ci.org/public/org/jenkins-ci/main/remoting/${VERSION}/remoting-${VERSION}.jar \
