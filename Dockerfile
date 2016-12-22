@@ -37,7 +37,7 @@ RUN yum install -y epel-release \
         wget \
         #  java-1.8.0-openjdk \
         #  java-1.8.0-openjdk-devel \
-     && yum --setopt=group_package_types=mandatory,default,optional group install -y "Development Tools" \
+     && yum --setopt=group_package_types=mandatory,default,optional groupinstall -y "Development Tools" \
      && wget -q -c --no-check-certificate \
         --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" \
         "http://download.oracle.com/otn-pub/java/jdk/8u112-b15/jdk-8u112-linux-x64.rpm" \
